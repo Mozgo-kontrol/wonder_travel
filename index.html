@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440px, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0578FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #0578FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+        }
+        .social-media li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .social-media a {
+            color: white;
+            text-decoration: none;
+        }
+        #pictures_section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+        #pictures_section h2 {
+            margin: 0;
+            padding: 10px;
+        }
+        #mob_apps_section, #faqs_section {
+            padding: 20px;
+            margin: 10px 0;
+        }   
+
+            @media (max-width: 600px) {
+                header, footer {
+                    text-align: center;
+                }
+                .navbar li {
+                    display: block;
+                    margin: 10px 0;
+                }
+            } */
+        header {
+            background-color: #dbe4ed;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            direction: row;
+            align-items: center;
+        }
+        .logo_item {
+            display: flex;
+            direction: row;
+            align-items: center;
+            color: #000;
+            margin-left: 16px;
+            text-decoration: none;  
+        }
+        .nav {
+            display: flex;
+            direction: row;
+            align-items: center;
+            margin-right: 16px;
+            size: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            size: 20px;
+            color: #000;
+        }
+        .logo_text {
+            font-size: 34px;
+            color: #000;
+        }
+        .logo{
+            width: 73px;
+            height: 34px;
+            margin-right: 8px;
+        }
+
+        .nav-item {
+           color: rgb(10, 51, 60);
+           padding: 16px 16px;
+           size: 20px;
+           text-decoration: none;
+           font-weight: bold;
+        }
+
+        .nav-item:hover {
+            color: #0578FF;
+        }
+        .main {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 64px;
+            padding-right: 64px;
+            padding-left: 64px;
+            padding-bottom: 128px;
+            background-color: #e205ff;
+            color: white;
+        }
+
+        .statistic {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0578FF;
+            color: white;
+            align-items: center;
+            padding-top: 60px;
+            padding-left: 64px;
+            padding-right: 64px;
+            padding-bottom: 60px;
+            margin: 10px 0;
+        }
+
+        .statistic_item {
+            text-align: center;
+            flex: 1;
+            align-content: center;
+         
+        }
+        .statistic_item h2 {
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+            align-content: start;
+            text-align: center;
+            padding-bottom: 8px;
+            color: white;
+            font-weight: bold;
+           
+        }
+        .statistic_item p {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        .mob_apps {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background-color: #FFC501;
+        }
+        .mob_apps h2 {
+            size: 62px;
+            font-weight: bold;
+            color: #000;
+        }
+        .app_links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .app_links a {
+            margin: 10px;
+        }
+        .app_links img {
+            width: 213px;
+            height: 65px;
+            margin-right: 10px;
+        }
+        </style>    
+</head>
+<header>
+    <div class="logo_item">
+       <img class="logo" src="assets/icons/logo.svg" alt="logo">
+       <p class="logo_text">Wonders</p>
+    </div>
+    <nav class="nav" >
+        <a href="#mob_apps_section" class="nav-item">Mobile App</a>
+        <a href="#faqs_section" class="nav-item">FAQs</a>
+        <a href="#footer_section" class="nav-item">Contact</a>
+        <a href="#sign_up_section" class="nav-item">Sign Up</a>
+    </nav>
+</header>
+<body>
+  <div id="main_section" class = "main" style="text-align: center; background-color: #e205ff; color: white; padding: 20px;">
+    <div class="main_left">
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple HTML page with a header, footer, and a responsive image.</p>
+    </div>
+    <div class="main_right">
+          <img src="assets/images/Hero.png" alt="App Store" style="width: auto; height: 704px;">
+    <!--  <picture>
+     <source srcset="assets/icons/Hero.jpg" media="(max-width: 320px)">
+     <source srcset="image-640w.jpg" media="(max-width: 640px)">
+     <source srcset="image-1280w.jpg" media="(max-width: 1280px)">
+     <img src="image-1280w.jpg" alt="Пример изображения"> -->
+    </div>
+  </div>
+<picture>
+
+<div id="statictic_section" style="text-align: center; background-color: #0578FF;" >
+<div class="statistic"> 
+<div class="statistic_item">
+   <h2>68k+</h2>
+   <p>Track kilometers</p>
+</div>
+<div class="statistic_item">
+   <h2>1.4M+</h2>
+   <p>Photos Taken</p>
+</div>
+<div class="statistic_item">
+   <h2>23M+</h2>
+   <p>Altitude Gained</p>
+</div>
+<div class="statistic_item">
+   <h2>165+</h2>
+   <p>Years of history</p>
+</div>
+</div>
+
+<div id="pictures_section" style="text-align: center; background-color: #a9dcd7;" >
+<h2>Glimpses of Glory</h2>
+</div>
+
+<div id="mob_apps_section">
+    <div class="mob_apps">
+        <h2>Free downloads app now!</h2>
+        <div class = "app_links" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px;">
+            <a href="https://play.google.com/store/apps" target="_blank">
+                <img src="assets/icons/google_play_gallary.png" alt="Google Play" >
+            </a>
+             </a>
+              <a href="https://consumer.huawei.com/de/campaign/appgallery/" target="_blank">
+                <img src="assets/icons/huawei_gallery.png" alt="Huawei Gallary">
+            </a>
+            <a href="https://www.apple.com/app-store/" target="_blank">
+                <img src="assets/icons/appstore_gallery.png" alt="App Store">
+            </a>
+        </div>
+      
+    </div>
+</div>
+
+
+<div id="faqs_section" style="text-align: left;" >
+<h2>FAQs</h2>
+<p>This is a simple HTML page with a header, footer, and a responsive image.</p>
+</div>
+</body>
+<footer id ="footer_section" style="text-align: center; background-color: #0578FF; color: white; padding: 20px;">
+    <p>&copy; 2023 My Website</p>
+    <ul class="social-media">
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+    </ul>
+</footer>
+</html>
