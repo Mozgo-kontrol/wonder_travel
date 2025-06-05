@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1440px, initial-scale=1.0">
+    <meta name="viewport" content="width=1440px , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML page with a header, footer, and a responsive image.">
+    <meta name="keywords" content="HTML, CSS, responsive design, web development">
+    <meta name="author" content="Igor">
+    <link rel="stylesheet" href="styles/google_font.css">
     <title>Document</title>
     <style>
-     
         header {
             background-color: #dbe4ed;
             color: white;
@@ -68,9 +72,9 @@
 
         .statistic {
             display: flex;
-            justify-content: space-between;
             background-color: #0578FF;
             color: white;
+            justify-content: space-evenly;
             align-items: center;
             padding-top: 60px;
             padding-left: 64px;
@@ -104,32 +108,113 @@
 
         .mob_apps {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
-            align-items: space-between;
-            justify-content: center;
-            text-align: center;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
             background-color: #FFC501;
         }
         .mob_apps h2 {
-            size: 62px;
+            font-size: 62px;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0;
             font-weight: bold;
             color: #000;
         }
         .app_links {
             display: flex;
+            flex-direction: row;
+             align-items: stretch;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             padding: 20px;
         }
-        .app_links a {
+
+        .app_links img {
+            margin-right: 10px;
             margin: 10px;
         }
-        .app_links img {
-            width: 213px;
-            height: 65px;
+        
+        .pictures_section{
+              flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 20px;
+            background-color: #ff0548;
+            color: white;
+        }
+        .pictures_section h2{
+            text-align: left;
+            font-size: 64px;
+            margin-left: 45px;
+            font-weight: bold;
+            color: rgb(11, 8, 8);
+        }
+        .img_block {
+            display: flex;
+            background-color: #a9dcd7;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .img-1{
+            direction: column;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 15px;
             margin-right: 10px;
+
+        }
+    
+        .img-2{
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-areas:
+            "mountins2 road2"
+            "road1 road1";
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-left: 12px;
+            grid-template-rows: 2fr 1fr;
+        }
+    
+         .bus {
+            width: 528px; 
+            height: 380px; 
+           
+        }
+        .mountins1 {
+            width: 528px; 
+            height: 380px; 
+            margin-bottom: 10px;
+        }
+        .mountins2 {
+            grid-area: mountins2;
+            width: 305px; 
+            height: 489px; 
+        }
+        .road1 {
+            grid-area: road1;
+            width: 740px;
+            height: 264px;
+        }
+        .road2 {
+            grid-area: road2;
+            width: 416px;
+            height: 489px;
+        }
+        .shape {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         </style>    
 </head>
@@ -153,11 +238,6 @@
     </div>
     <div class="main_right">
           <img src="assets/images/Hero.png" alt="App Store" style="width: auto; height: 704px;">
-    <!--  <picture>
-     <source srcset="assets/icons/Hero.jpg" media="(max-width: 320px)">
-     <source srcset="image-640w.jpg" media="(max-width: 640px)">
-     <source srcset="image-1280w.jpg" media="(max-width: 1280px)">
-     <img src="image-1280w.jpg" alt="Пример изображения"> -->
     </div>
   </div>
 <picture>
@@ -182,14 +262,25 @@
 </div>
 </div>
 
-<div id="pictures_section" style="text-align: center; background-color: #a9dcd7;" >
-<h2>Glimpses of Glory</h2>
+<div class="pictures_section">
+    
+    <h2>Glimpses of Glory</h2>
+<div class="img_block">
+    <div class ="img-1">
+        <img src="assets/images/ing02.png" class ="shape mountins1" alt="Picture 2">
+        <img src="assets/images/ing01.png" class ="shape bus" alt="Picture 1">
+    </div>
+    <div class ="img-2">
+    <img src="assets/images/ing03.png" class ="shape mountins2" alt="Picture 3">
+    <img src="assets/images/ing04.png" class ="shape road1" alt="Picture 4">
+    <img src="assets/images/ing05.png" class ="shape road2" alt="Picture 5">
+    </div>
 </div>
 
 <div id="mob_apps_section">
     <div class="mob_apps">
         <h2>Free downloads app now!</h2>
-        <div class = "app_links" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px;">
+        <div class = "app_links">
             <a href="https://play.google.com/store/apps" target="_blank">
                 <img src="assets/icons/google_play_gallary.png" alt="Google Play" >
             </a>
@@ -212,7 +303,8 @@
 </div>
 </body>
 <footer id ="footer_section" style="text-align: center; background-color: #0578FF; color: white; padding: 20px;">
-    <p>&copy; 2023 My Website</p>
+
+    
     <ul class="social-media">
         <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
         <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
